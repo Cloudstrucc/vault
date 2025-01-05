@@ -268,39 +268,36 @@ class DataValidator {
 
 1. **Combining Diacritical Marks (0x0300-0x036F):**
 
-    ```typescript
-    char + String.fromCharCode(0x0301) // Adds an acute accent
-    ```
+   ```typescript
+   char + String.fromCharCode(0x0301) // Adds an acute accent
+   ```
 
-    - Advantages: Very common in normal text
-    - Disadvantages: Might be normalized by some systems
-
+   - Advantages: Very common in normal text
+   - Disadvantages: Might be normalized by some systems
 2. **Variation Selectors (0xFE00-0xFE0F):**
 
-    ```typescript
-    char + String.fromCharCode(0xFE00) // Adds a variation selector
-    ```
+   ```typescript
+   char + String.fromCharCode(0xFE00) // Adds a variation selector
+   ```
 
-    - Advantages: Designed for text modification
-    - Disadvantages: Better preserved than zero-width chars
-
+   - Advantages: Designed for text modification
+   - Disadvantages: Better preserved than zero-width chars
 3. **Combining Ligature Marks (0xFE20-0xFE2F):**
 
-    ```typescript
-    char + String.fromCharCode(0xFE20) // Adds a half ligature
-    ```
+   ```typescript
+   char + String.fromCharCode(0xFE20) // Adds a half ligature
+   ```
 
-    - Advantages: Less likely to be stripped
-    - Disadvantages: More visible in some fonts
-
+   - Advantages: Less likely to be stripped
+   - Disadvantages: More visible in some fonts
 4. **Mathematical Invisible Operators (0x2061-0x2064):**
 
-    ```typescript
-    char + String.fromCharCode(0x2061) // Adds function application
-    ```
+   ```typescript
+   char + String.fromCharCode(0x2061) // Adds function application
+   ```
 
-    - Advantages: Very rarely stripped
-    - Disadvantages: Limited number available
+   - Advantages: Very rarely stripped
+   - Disadvantages: Limited number available
 
 #### The explored implementation provided uses multiple strategies simultaneously to improve resilience
 
@@ -343,7 +340,6 @@ class DataValidator {
    - Insert the canary tokens into your personal data using multiple Unicode techniques
    - Each piece of data (name, address, etc.) gets unique tokens
    - The data looks normal to Amazon's systems but contains invisible markers
-
 2. Detection Mechanism:
 
    - The vault monitors for your marked data appearing outside authorized domains through:
@@ -351,7 +347,6 @@ class DataValidator {
    - API call monitoring
    - Cross-domain tracking
    - Looking for the canary tokens in unexpected contexts
-
 3. Alert & Action Flow:
 
 ```markdown
@@ -373,7 +368,6 @@ However, there are important limitations to note:
    - Once data is on Amazon's servers, we can't directly encrypt it there
    - The encryption would only affect future uses of the data
    - Servers could strip Unicode markers before storing
-
 2. More Realistic Protection Model:
 
    - Instead of trying to encrypt data on third-party servers (which isn't possible), you could:
@@ -392,7 +386,6 @@ However, there are important limitations to note:
    - The shadow state remains encrypted but functionally identical
    - When unauthorized sharing occurs, the shadow state could become primary
    - This could leverage trusted execution environments (TEE) or secure enclaves
-
 2. "Encryption only affecting future uses":
    Some research vectors:
 
@@ -400,7 +393,6 @@ However, there are important limitations to note:
    - Create "quantum-inspired" data states where observation changes the data's form
    - Research retroactive encryption techniques using blockchain-like propagation
    - Explore memory-mapped data structures that maintain references to original sources
-
 3. "Servers stripping Unicode markers":
    Beyond Unicode, we could research:
 
