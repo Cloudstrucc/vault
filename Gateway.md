@@ -19,7 +19,7 @@
 - **Processor**: 8 CPU cores (3.0 GHz or higher)
 - **Memory**: 16 GB RAM
 - **Storage**: 100 GB SSD (Premium Storage recommended)
-- **Network**: 1 Gbps NIC
+- **Network**: 1 Gbps NIC (optional - non produciton network bandwith sufficient)
 
 #### Production Recommended Requirements ( Min 2 servers for redundancy)
 
@@ -27,7 +27,7 @@
 - **Processor**: 16 CPU cores (3.5 GHz or higher)
 - **Memory**: 32 GB RAM
 - **Storage**: 256 GB SSD (Premium Storage required)
-- **Network**: 10 Gbps NIC
+- **Network**: 10 Gbps NIC (optional - production network bandwith sufficient)
 
 ### Software Prerequisites
 
