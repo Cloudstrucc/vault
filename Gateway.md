@@ -8,6 +8,7 @@
 - [High Availability Design](#high-availability-design)
 - [Performance Optimization](#performance-optimization)
 - [Monitoring and Maintenance](#monitoring-and-maintenance)
+- [Installation](#download-and-install-the-standard-gateway)
 
 ## Infrastructure Requirements
 
