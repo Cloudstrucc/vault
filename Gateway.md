@@ -13,7 +13,7 @@
 
 ### Server Specifications
 
-#### Minimum Requirements
+#### Non Production Server Requirements (1 per non production network zone)
 
 - **Operating System**: Windows Server 2022 Standard/Datacenter
 - **Processor**: 8 CPU cores (3.0 GHz or higher)
@@ -21,7 +21,7 @@
 - **Storage**: 100 GB SSD (Premium Storage recommended)
 - **Network**: 1 Gbps NIC
 
-#### Production Recommended Requirements
+#### Production Recommended Requirements ( Min 2 servers for redundancy)
 
 - **Operating System**: Windows Server 2022 Datacenter
 - **Processor**: 16 CPU cores (3.5 GHz or higher)
