@@ -11,6 +11,10 @@
 
 ## Infrastructure Requirements
 
+The on-premises gateway allows Power Apps and Power Automate to reach back to on-premises resources to support hybrid integration scenarios. The gateway enables Azure Service Bus relay technology to securely allow access to on-premises resources.
+
+![1736843318035](image/Gateway/1736843318035.png)
+
 ### Server Specifications
 
 #### Non Production Server Requirements (1 per non production network zone)
